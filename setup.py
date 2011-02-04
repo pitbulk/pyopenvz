@@ -13,7 +13,6 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
     ],
-    py_modules=['pyopenvz'],
     install_requires=[
         'distribute==0.6.14',
     ],
