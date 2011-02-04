@@ -4,12 +4,13 @@ from django.conf import settings
 from django.contrib import admin
 admin.autodiscover()
 
-handler500 # Pyflakes
-
 urlpatterns = patterns(
     '',
     (r'^admin/(.*)', admin.site.root),
     (r'^accounts/login/$', 'django.contrib.auth.views.login'),
+
+    # OpenVZ api
+    (r'^api/', include('pyopenvz.api.urls')),
 )
 
 if settings.DEBUG:
